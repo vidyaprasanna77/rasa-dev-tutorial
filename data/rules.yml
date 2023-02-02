@@ -1,5 +1,18 @@
 version: "3.1"
 
 rules:
+- rule: Activate form
+  steps:
+  - intent: subscribe
+  - action: newsletter_form
+  - active_loop: newsletter_form 
 
-
+- rule: Submit form
+  condition:
+  # Condition that form is active.
+  - active_loop: newsletter_form
+  steps:
+  # Form is deactivated
+  - action: newsletter_form
+  - active_loop: null
+  - action: utter_subscribed

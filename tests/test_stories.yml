@@ -14,6 +14,28 @@ stories:
   - action: utter_happy
 
 
+- story: newsletter from happy path 
+  steps: 
+  - user: |
+      hi 
+    intent: greet 
+  - action: utter_greet 
+  - user: |
+      I want to subscribe  
+    intent: subscribe 
+  - action: newsletter_form 
+  - active_loop: newsletter_form 
+  - user: |
+      my email is [easxcd@example.com]{"entity": "email"}
+    intent: inform_email 
+  - action: newsletter_form 
+  - user: |
+      twice a month 
+    intent: inform_frequency 
+  - action: newsletter_form 
+  - active_loop: null 
+  - action: utter_subscribed 
+
 
 
 
