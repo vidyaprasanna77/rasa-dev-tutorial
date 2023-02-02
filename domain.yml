@@ -8,7 +8,8 @@ intents:
   - inform_frequency 
   - chitchat
   - affirm 
-  - deny  
+  - deny 
+  - ask_price 
 
 
 entities: 
@@ -23,10 +24,11 @@ slots:
       entity: email 
 
   frequency:
-    type: text 
+    type: categorical 
     mappings:
     - type: from_entity 
       entity: frequency 
+      value: true
 
 responses:
   utter_greet:
@@ -46,7 +48,13 @@ responses:
   - text: "You are all set! check your inbox at {email} to confirm your  subscription. You will receive emails {frequency}."
 
   utter_ask_continue: 
-  - text: "Sorry I dont quite understand . Do you want to continue? "
+  - text: "Sorry I dont quite understand . Do you want to continue? " 
+
+  utter_price_for_once_a_week: 
+  - text: "once a week subscription cost $5"
+
+  utter_price_for_twice_a_month:
+  - text: "twice a month subscription cost $10"
 
 forms: 
   newsletter_form:

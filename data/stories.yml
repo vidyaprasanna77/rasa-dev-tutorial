@@ -27,4 +27,15 @@ stories:
   - intent: chitchat
   - action: utter_ask_continue
   - intent: affirm
-  - action: newsletter_form
+  - action: newsletter_form  
+
+- story: newletter form stop 
+  steps: 
+  - intent: subscribe 
+  - action: newsletter_form 
+  - active_loop: newsletter_form 
+  - intent: chitchat 
+  - action: utter_ask_continue 
+  - intent: deny 
+  - action: action_deactivate_loop
+  - active_loop: null 

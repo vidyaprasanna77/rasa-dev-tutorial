@@ -113,6 +113,15 @@ nlu:
       - not great
       - nope
 
+
+
+- intent: ask_price 
+  examples: | 
+    - how much will it be?
+    - whats the price 
+    - how much will it cost 
+    - how much will I pay? 
+
 - synonym: Once a week 
   examples: |
     - every week 
