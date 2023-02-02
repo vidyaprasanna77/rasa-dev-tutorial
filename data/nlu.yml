@@ -17,75 +17,61 @@ nlu:
     - goodevening
     - good afternoon
 
-- intent: goodbye
+- intent: mood_great 
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - perfect 
+    - great 
+    - amazing 
+    - feeling like a king 
+    - Iam great 
+    - Iam amazing 
+    - Iam going to save the world 
+    - super stroked 
+    - extremely  good 
+    - so so perfect 
+    - so good 
+    - so perfect 
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
 
-- intent: deny
+- intent: subscribe 
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - i want to get the newsletter
+    - can you send me the newsletter?
+    - can you sign me up for the newsletter 
+    - I want to subscribe a newsletter.
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+- intent: inform_email 
+  examples: | 
+    - my email is [example@gmail.com]{"entity": "email"}
+    - [example@yahoo.com]{"entity": "email"}
+    - [deevcv@outlook.com]{"entity": "email"}
+    - [example@example.com] {"entity": "email"}
+    - please send it to [anything@example.com]{"entity": "email"}
 
-- intent: mood_unhappy
+- intent: inform_frequency
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - [every week] {"entity": "frequency" , "value": "once a week"} 
+    - [once a week] {"entity": "frequency","value": "once a week"}
+    - [twice] per month {"entity": "frequency","value": "twice a month"}
+    - [as often as] possible {"entity": "frequency","value": "twice a month"}
+    - [once a month]{"entity": "frequency","value": "twice a month"} 
 
-- intent: bot_challenge
+
+- synonym: Once a week 
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - every week 
+    - once a week 
+    - weekly once 
+
+- synonym: twice a month 
+  examples: |
+    - twice 
+    - as often as 
+    - once a month 
+
+
+
+
+
+
+

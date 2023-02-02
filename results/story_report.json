@@ -1,0 +1,111 @@
+{
+  "greet": {
+    "precision": 0.4166666666666667,
+    "recall": 1.0,
+    "f1-score": 0.5882352941176471,
+    "support": 5
+  },
+  "affirm": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+  },
+  "utter_goodbye": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 4
+  },
+  "utter_happy": {
+    "precision": 0.2727272727272727,
+    "recall": 1.0,
+    "f1-score": 0.42857142857142855,
+    "support": 3
+  },
+  "utter_cheer_up": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3
+  },
+  "utter_did_that_help": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3
+  },
+  "utter_greet": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5
+  },
+  "utter_iamabot": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+  },
+  "mood_great": {
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1-score": 0.6666666666666666,
+    "support": 2
+  },
+  "action_listen": {
+    "precision": 0.8421052631578947,
+    "recall": 1.0,
+    "f1-score": 0.9142857142857143,
+    "support": 16
+  },
+  "deny": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2
+  },
+  "mood_unhappy": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 3
+  },
+  "goodbye": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2
+  },
+  "bot_challenge": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+  },
+  "accuracy": 0.6078431372549019,
+  "macro avg": {
+    "precision": 0.216535657325131,
+    "recall": 0.35714285714285715,
+    "f1-score": 0.25698279311724687,
+    "support": 51
+  },
+  "weighted avg": {
+    "precision": 0.438729399255715,
+    "recall": 0.6078431372549019,
+    "f1-score": 0.49389795133739767,
+    "support": 51
+  },
+  "micro avg": {
+    "precision": 0.6078431372549019,
+    "recall": 0.6078431372549019,
+    "f1-score": 0.6078431372549019,
+    "support": 51
+  },
+  "conversation_accuracy": {
+    "accuracy": 0.14285714285714285,
+    "correct": 1,
+    "with_warnings": 0,
+    "total": 7
+  }
+}

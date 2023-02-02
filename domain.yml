@@ -1,33 +1,53 @@
 version: "3.1"
 
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+  - greet 
+  - mood_great 
+
+
+entities: 
+- email 
+- frequency 
+- inform_email
+- inform_frequency 
+
+slots:
+  email: 
+    type: text
+    mappings: 
+    - type: from_entity 
+      entity: email 
+
+  frequency:
+    type: text 
+    mappings:
+    - type: from_entity 
+      entity: frequency 
 
 responses:
   utter_greet:
   - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
+  - text: "Hi How's it going?"
 
   utter_happy:
   - text: "Great, carry on!"
 
-  utter_goodbye:
-  - text: "Bye"
+  utter_ask_email:
+  - text: "what is your email? "
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  utter_ask_frequency:
+  - text: "How often do you want to receive eamils from me? "
+
+  utter_subscribed: 
+  - text: "You are all set! check your inbox at {email} to confirm your  subscription. You will receive emails {frequency}."
+
+forms: 
+  newsletter_form:
+    required_slots:
+        - email
+        - frequency 
+
+
 
 session_config:
   session_expiration_time: 60

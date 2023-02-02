@@ -1,0 +1,45 @@
+version: "3.1"
+stories:
+- story: happy path 2 (.\venv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - intent: goodbye  # predicted: greet: bye-bye!
+  - action: utter_goodbye  # predicted: utter_happy
+- story: sad path 1 (.\venv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy  # predicted: greet: not good
+  - action: utter_cheer_up  # predicted: utter_happy
+  - action: utter_did_that_help  # predicted: action_listen
+  - intent: affirm  # predicted: greet: yes
+  - action: utter_happy
+- story: sad path 2 (.\venv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy  # predicted: greet: not good
+  - action: utter_cheer_up  # predicted: utter_happy
+  - action: utter_did_that_help  # predicted: action_listen
+  - intent: deny  # predicted: mood_great: not really
+  - action: utter_goodbye  # predicted: utter_happy
+- story: sad path 3 (.\venv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy  # predicted: greet: very terrible
+  - action: utter_cheer_up  # predicted: utter_happy
+  - action: utter_did_that_help  # predicted: action_listen
+  - intent: deny  # predicted: greet: no
+  - action: utter_goodbye  # predicted: utter_happy
+- story: say goodbye (.\venv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
+  steps:
+  - intent: goodbye  # predicted: greet: bye-bye!
+  - action: utter_goodbye  # predicted: utter_happy
+- story: bot challenge (.\venv\Lib\site-packages\rasa\cli\initial_project\tests\test_stories.yml)
+  steps:
+  - intent: bot_challenge  # predicted: mood_great: are you a bot?
+  - action: utter_iamabot  # predicted: utter_happy
