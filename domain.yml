@@ -53,7 +53,7 @@ responses:
   utter_price_for_once_a_week: 
   - text: "once a week subscription cost $5"
 
-  utter_price_for_twice_a_month:
+  utter_price_for_twice_a_week:
   - text: "twice a month subscription cost $10"
 
 forms: 

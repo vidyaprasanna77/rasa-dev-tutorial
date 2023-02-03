@@ -38,4 +38,27 @@ stories:
   - action: utter_ask_continue 
   - intent: deny 
   - action: action_deactivate_loop
-  - active_loop: null 
+  - active_loop: null
+
+
+- story: once a week
+  steps:
+  - intent: subscribe
+  - action: newsletter_form
+  - active_loop: newsletter_form
+  - slot_was_set:
+      - frequency: once a week
+  - intent: ask_price
+  - action: utter_price_for_once_a_week
+  - action: newsletter_form
+
+- story: twice a week
+  steps:
+  - intent: subscribe
+  - action: newsletter_form
+  - active_loop: newsletter_form
+  - slot_was_set:
+      - frequency: twice a week
+  - intent: ask_price
+  - action: utter_price_for_twice_a_week
+  - action: newsletter_form

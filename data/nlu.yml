@@ -52,9 +52,9 @@ nlu:
   examples: |
     - [every week] {"entity": "frequency" , "value": "once a week"} 
     - [once a week] {"entity": "frequency","value": "once a week"}
-    - [twice] per month {"entity": "frequency","value": "twice a month"}
-    - [as often as] possible {"entity": "frequency","value": "twice a month"}
-    - [once a month]{"entity": "frequency","value": "twice a month"} 
+    - [twice] a week {"entity": "frequency","value": "twice a week"}
+    - [as often as] possible {"entity": "frequency","value": "twice a week"}
+    - [twice a week]{"entity": "frequency","value": "twice a week"} 
 
 
 - intent: chitchat
@@ -128,7 +128,7 @@ nlu:
     - once a week 
     - weekly once 
 
-- synonym: twice a month 
+- synonym: twice a week
   examples: |
     - twice 
     - as often as 
