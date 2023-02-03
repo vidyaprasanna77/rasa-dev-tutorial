@@ -1,64 +1,62 @@
 version: "3.1"
 
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
 
-- intent: mood_great 
-  examples: |
-    - perfect 
-    - great 
-    - amazing 
-    - feeling like a king 
-    - Iam great 
-    - Iam amazing 
-    - Iam going to save the world 
-    - super stroked 
-    - extremely  good 
-    - so so perfect 
-    - so good 
-    - so perfect 
+  - intent: mood_great
+    examples: |
+      - perfect 
+      - great 
+      - amazing 
+      - feeling like a king 
+      - Iam great 
+      - Iam amazing 
+      - Iam going to save the world 
+      - super stroked 
+      - extremely  good 
+      - so so perfect 
+      - so good 
+      - so perfect
 
+  - intent: subscribe
+    examples: |
+      - i want to get the newsletter
+      - can you send me the newsletter?
+      - can you sign me up for the newsletter 
+      - I want to subscribe a newsletter.
 
-- intent: subscribe 
-  examples: |
-    - i want to get the newsletter
-    - can you send me the newsletter?
-    - can you sign me up for the newsletter 
-    - I want to subscribe a newsletter.
+  - intent: inform_email
+    examples: |
+      - my email is [example@gmail.com]{"entity": "email"}
+      - [example@yahoo.com]{"entity": "email"}
+      - [deevcv@outlook.com]{"entity": "email"}
+      - [example@example.com] {"entity": "email"}
+      - please send it to [anything@example.com]{"entity": "email"}
 
-- intent: inform_email 
-  examples: | 
-    - my email is [example@gmail.com]{"entity": "email"}
-    - [example@yahoo.com]{"entity": "email"}
-    - [deevcv@outlook.com]{"entity": "email"}
-    - [example@example.com] {"entity": "email"}
-    - please send it to [anything@example.com]{"entity": "email"}
+  - intent: inform_frequency
+    examples: |
+      - [every week] {"entity": "frequency" , "value": "once a week"} 
+      - [once a week] {"entity": "frequency","value": "once a week"}
+      - [twice] a week {"entity": "frequency","value": "twice a week"}
+      - [as often as] possible {"entity": "frequency","value": "twice a week"}
+      - [twice a week]{"entity": "frequency","value": "twice a week"}
 
-- intent: inform_frequency
-  examples: |
-    - [every week] {"entity": "frequency" , "value": "once a week"} 
-    - [once a week] {"entity": "frequency","value": "once a week"}
-    - [twice] a week {"entity": "frequency","value": "twice a week"}
-    - [as often as] possible {"entity": "frequency","value": "twice a week"}
-    - [twice a week]{"entity": "frequency","value": "twice a week"} 
-
-
-- intent: chitchat
-  examples: |
+  - intent: chitchat
+    examples: |
       - that's not what I want to do
       - wait stop
       - you're no help
@@ -76,9 +74,10 @@ nlu:
       - nevermind
       - I want to do something else
       - I changed my mind
+      - shutup  ypur mouth
 
-- intent: affirm
-  examples: |
+  - intent: affirm
+    examples: |
       - yes
       - indeed
       - of course
@@ -94,11 +93,10 @@ nlu:
       - fine
       - You bet
       - I sure did
-      - more or less 
+      - more or less
 
-
-- intent: deny
-  examples: |
+  - intent: deny
+    examples: |
       - no
       - never
       - I don't think so
@@ -113,30 +111,21 @@ nlu:
       - not great
       - nope
 
+  - intent: ask_price
+    examples: |
+      - how much will it be?
+      - whats the price 
+      - how much will it cost 
+      - how much will I pay?
 
+  - synonym: Once a week
+    examples: |
+      - every week 
+      - once a week 
+      - weekly once
 
-- intent: ask_price 
-  examples: | 
-    - how much will it be?
-    - whats the price 
-    - how much will it cost 
-    - how much will I pay? 
-
-- synonym: Once a week 
-  examples: |
-    - every week 
-    - once a week 
-    - weekly once 
-
-- synonym: twice a week
-  examples: |
-    - twice 
-    - as often as 
-    - once a month 
-
-
-
-
-
-
-
+  - synonym: twice a week
+    examples: |
+      - twice 
+      - as often as 
+      - once a month
